@@ -7,8 +7,8 @@ body {
 }
 
 :root {
-    --cell-size: 120px;
-    --mark-size: calc((var(--cell-size)*.8));
+    --cell-size: 150px;
+    --mark-size: calc((var(--cell-size)*.7));
     --circle-image: url('/home/mikoppi/repos/Tic-tac-toe-1/pictures/Flushed Face Emoji.png'); 
     --x-image: url('/home/mikoppi/repos/Tic-tac-toe-1/pictures/Smiling Face with Tightly Closed eyes.png')
 }
@@ -20,12 +20,15 @@ body {
     grid-template-columns: repeat(3,auto);
     justify-content: center;
     align-content: center;
+    background-color: rgb(221, 171, 156);
+
+    
     
 }
 .cell {
     width:var(--cell-size);
     height:var(--cell-size);
-    border: 1px solid black;
+    border: 1px solid rgb(162, 108, 231);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,7 +80,8 @@ body {
     background-size: var(--mark-size);
     background-repeat: no-repeat;
     background-position: center;
-    opacity: .3; 
+    opacity: .6;
+    
 }
 
 .board.circle .cell:not(.x):not(.circle):hover {
@@ -85,7 +89,7 @@ body {
     background-size: var(--mark-size);
     background-repeat: no-repeat;
     background-position: center;
-    opacity: .3; 
+    opacity: .6; 
 }
 
 .cell.x,
@@ -114,7 +118,7 @@ body {
     
 }
 
-button {
+#restartButton {
     padding: 15px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
@@ -128,4 +132,71 @@ button {
 
 .winning-message.show {
     display: flex;
+}
+
+.start-message {
+    height:20vh;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(221, 171, 156) ;
+    gap:30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: larger;    
+}
+
+#startButton {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 20px;
+    border-style: none;
+    color: yellow;
+    padding:10px;
+    padding-left: 20px;
+}
+#startButton::after {
+    
+    background-image: var(--circle-image);
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 40px;
+    width: 50px;
+    content: '';
+    margin-left: 10px;
+
+}
+
+#startButton2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 20px;
+    border-style: none;
+    color: yellow;
+    padding:10px;
+    padding-left: 20px;
+}
+#startButton2::after {
+    
+    background-image: var(--x-image);
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 40px;
+    width: 50px;
+    content: '';
+    margin-left: 10px;
 }
