@@ -15,7 +15,7 @@ body {
 
 .board {
     width: 100vw;
-    height:100vh;
+    height:70vh;
     display: grid;
     grid-template-columns: repeat(3,auto);
     justify-content: center;
@@ -28,7 +28,7 @@ body {
 .cell {
     width:var(--cell-size);
     height:var(--cell-size);
-    border: 1px solid rgb(162, 108, 231);
+    border: 1px solid rgb(251, 255, 0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,8 +112,8 @@ body {
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    font-size: larger;
-    font-size: 30px;
+    font-size: 5vh;
+    
     
     
 }
@@ -135,17 +135,18 @@ body {
 }
 
 .start-message {
-    height:20vh;
+    height:10vh;
     
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: rgb(221, 171, 156) ;
-    gap:30px;
+    gap:60px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    font-size: larger;    
+    font-size: larger;
+    margin-bottom: 0;    
 }
 
 #startButton {
@@ -155,7 +156,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     border-radius: 20px;
     border-style: none;
     color: yellow;
@@ -182,7 +183,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     border-radius: 20px;
     border-style: none;
     color: yellow;
@@ -199,4 +200,39 @@ body {
     width: 50px;
     content: '';
     margin-left: 10px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: rgb(221, 171, 156)  ;
+    margin:0;
+    padding-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 5vh;
+    color: yellow;
+}
+
+.start {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: rgb(221, 171, 156)  ;
+    margin:0;
+    padding-top: 0;
+
+}
+#beginButton {
+    margin-top: 0;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size:x-large;
+    color: yellow;
+    background-color: rgba(0, 0, 0, 0.404);
+    border-radius: 20px;
+    border-style: none;
+    margin-top: 50px;
 }

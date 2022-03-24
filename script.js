@@ -9,8 +9,9 @@ const GameModule=(function() {
     const winningCombinations=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
     const winningMessageElement=document.querySelector('[data-winning-text]');
     
-
+    
     //This game needs functions like:
+    
     
     //function to start the game
     function startGame() {
@@ -24,6 +25,7 @@ const GameModule=(function() {
         addHoverEffect(circleTurn);
         document.querySelector('.winning-message').classList.remove('show');
     }
+         
     
     //functions to place the marker based on whos turn it is:
     
@@ -56,11 +58,11 @@ const GameModule=(function() {
     }
     
     //function to switch turns when marker has been placed
-        
+    
     function switchTurn() {
         circleTurn=!circleTurn;
     }
-
+    
     function checkWin(currentClass) {
         return winningCombinations.some(combination => {
             return combination.every(index => {
@@ -68,7 +70,7 @@ const GameModule=(function() {
             })
         })
     }
-
+    
     function endGame(draw) {
         if (draw) {
             winningMessageElement.innerText='Draw!';
@@ -78,28 +80,30 @@ const GameModule=(function() {
         }
         document.querySelector('.winning-message').classList.add('show');
     }
-
+    
     function isDraw() {
         return [...cells].every(cell => {
             return cell.classList.contains(classForX) || cell.classList.contains(classForCircle);
         })
     }
-
+    
     return {
-        startGame:startGame
+        startGame:startGame,
+        
     }
     
-
+    
+    
+    
 })();
 
 
 const restartButton=document.querySelector('#restartButton');
 restartButton.addEventListener('click',GameModule.startGame);
 
-const startWithX=document.querySelector('#startButton');
-startWithX.addEventListener('click',GameModule.startGame)
-const startWithCircle=document.querySelector('#startButton2');
-startWithCircle.addEventListener('click',GameModule.startGame)
+const beginButton=document.querySelector('#beginButton');
+beginButton.addEventListener('click',GameModule.startGame);
+
 
 
 
