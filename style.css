@@ -9,8 +9,8 @@ body {
 :root {
     --cell-size: 150px;
     --mark-size: calc((var(--cell-size)*.7));
-    --circle-image: url('/home/mikoppi/repos/Tic-tac-toe-1/pictures/Flushed Face Emoji.png'); 
-    --x-image: url('/home/mikoppi/repos/Tic-tac-toe-1/pictures/Smiling Face with Tightly Closed eyes.png')
+    --circle-image: url('pictures/Flushed Face Emoji.png'); 
+    --x-image: url('pictures/Smiling Face with Tightly Closed eyes.png')
 }
 
 .board {
