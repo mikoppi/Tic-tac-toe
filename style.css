@@ -10,7 +10,7 @@ body {
     --cell-size: 150px;
     --mark-size: calc((var(--cell-size)*.7));
     --circle-image: url('pictures/Flushed Face Emoji.png'); 
-    --x-image: url('pictures/Smiling Face with Tightly Closed eyes.png')
+    --x-image: url('pictures/Smiling Face with Tightly Closed eyes.png');
 }
 
 .board {
